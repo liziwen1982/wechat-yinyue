@@ -47,4 +47,63 @@
       </view>
     </view>
   </view>
+
+  <!-- 推荐 内容区 -->
+  <scroll-view class="reconmandScroll" enable-flex scroll-x>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg">
+      </image>
+      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+    </view>
+  </scroll-view>
 </view>

@@ -1,6 +1,6 @@
 .banners {
   width: 100%;
-  height: 320rpx;
+  height: 250rpx;
 }
 
 .banners image {
@@ -52,4 +52,37 @@
   padding: 10rpx 20rpx;
   font-size: 24rpx;
   border-radius: 30rpx;
+}
+
+/* 推荐 内容区 */
+.reconmandScroll {
+  display: flex;
+  margin-left: 20rpx;
+}
+.scrollItem {
+  width: 200rpx;
+  margin-right: 20rpx;
+  margin-top: 10rpx;
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.scrollItem text {
+  font-size: 26rpx;
+  /* 单行文本溢出隐藏 */
+  /* display: block; */           /* 强制转成块级元素，否则部分属性设置无效*/
+  /* white-space: nowrap; */      /* 不换行 */
+  /* overflow: hidden; */         /* 超出部分隐藏 */
+  /* text-overflow: ellipsis; */  /* 溢出部分显示省略号 */
+
+    /* 多行文本溢出隐藏 */
+    display: -webkit-box;
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 溢出部分显示省略号 */
+    -webkit-box-orient: vertical; /* 设置对其模式 */
+    -webkit-line-clamp: 2; /* 多行的行数 */
 }
