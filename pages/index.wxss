@@ -33,5 +33,23 @@
 }
 
 .navItem text {
-  font-size: 20rpx;
+  font-size: 26rpx;
+}
+
+/* 推荐歌曲 区域 */
+.reconmandContainer {
+  padding: 20rpx;
+}
+.reconmandContainer .header .title {
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color:#666
+}
+
+.reconmandContainer .header  .more {
+  float: right;
+  border: 1rpx solid #333;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  border-radius: 30rpx;
 }
