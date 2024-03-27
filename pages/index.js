@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    bannerListData:[], // 轮播图数据
   },
 
   /**
@@ -26,8 +26,11 @@ Page({
     }
     ) */
 
-    let result = await repquest('/banner', {type:2})
-    console.log('异步结果：', result)
+    let bannerList = await repquest('/banner', {type:2})
+    this.setData({
+      bannerListData: bannerList.banners
+      }
+    )
   },
 
   /**
