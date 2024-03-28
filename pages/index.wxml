@@ -2,7 +2,7 @@
 
 <!-- 轮播图区域 -->
   <swiper class="banners" indicator-dots="true" indicator-active-color="#d43c33" indicator-color="ivory">
-    <swiper-item wx:for="{{bannerListData}}" wx:key="bannerId">
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
       <image src="{{item.pic}}" />
     </swiper-item>
   </swiper>
@@ -44,60 +44,10 @@
 
   <!-- 推荐 内容区 -->
   <scroll-view class="reconmandScroll" enable-flex scroll-x>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
+    <view class="scrollItem" wx:for='{{reconmandList}}' wx:key='id' wx:for-item='ritem'>
+      <image src="{{ritem.picUrl}}">
       </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvshen.jpg">
-      </image>
-      <text>贾静雯贾静雯贾静雯贾静雯贾静雯贾静雯</text>
+      <text>{{ritem.name}}</text>
     </view>
   </scroll-view>
 </view>

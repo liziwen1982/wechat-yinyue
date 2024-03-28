@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bannerListData:[], // 轮播图数据
+    bannerList:[], // 轮播图数据
+    reconmandList:[], // 推荐歌单
   },
 
   /**
@@ -26,9 +27,15 @@ Page({
     }
     ) */
 
-    let bannerList = await repquest('/banner', {type:2})
+    let bannerListData = await repquest('/banner', {type:2})
     this.setData({
-      bannerListData: bannerList.banners
+      bannerList: bannerListData.banners
+      }
+    )
+
+    let reconmandListData = await repquest('/personlized', {limit:2})
+    this.setData({
+      reconmandList: reconmandListData.result
       }
     )
   },
