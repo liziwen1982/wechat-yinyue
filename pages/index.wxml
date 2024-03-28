@@ -33,21 +33,22 @@
 
   <!-- 推荐歌曲 区域 -->
   <view class="reconmandContainer">
-    <view class="header">
-      <text class="title">推荐歌曲</text>
-      <view>
-        <text>为你精心推荐</text>
-        <text class="more">查看更多</text>
-      </view>
-    </view>
-  </view>
+    <NavHeader title="推荐歌曲" nav="为你精心推荐"></NavHeader>
+
 
   <!-- 推荐 内容区 -->
-  <scroll-view class="reconmandScroll" enable-flex scroll-x>
-    <view class="scrollItem" wx:for='{{reconmandList}}' wx:key='id' wx:for-item='ritem'>
-      <image src="{{ritem.picUrl}}">
-      </image>
-      <text>{{ritem.name}}</text>
-    </view>
-  </scroll-view>
+    <scroll-view class="reconmandScroll" enable-flex scroll-x>
+      <view class="scrollItem" wx:for='{{reconmandList}}' wx:key='id' wx:for-item='ritem'>
+        <image src="{{ritem.picUrl}}">
+        </image>
+        <text>{{ritem.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 排行榜 -->
+  <view class="topList">
+    <!-- 头部区 -->
+    <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
+    <!-- 内容区 -->
+  </view>
 </view>
