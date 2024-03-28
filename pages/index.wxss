@@ -74,3 +74,40 @@
     -webkit-box-orient: vertical; /* 设置对其模式 */
     -webkit-line-clamp: 2; /* 多行的行数 */
 }
+
+/* 排行榜 内容区*/
+.topList {
+  margin-left: 20rpx;
+}
+.topListSwiper {
+  height: 500rpx;
+}
+.topListSwiper swiper-item {
+  width: 90%;
+  background-color: #fefefe;
+}
+.topListSwiper .title {
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.musicItem {
+  /* 当一个元素设置成flex后，其子元素自动变成block元素*/
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.musicItem image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.musicItem .count {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.musicItem .musicName {
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}

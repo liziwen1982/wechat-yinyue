@@ -50,5 +50,61 @@
     <!-- 头部区 -->
     <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
     <!-- 内容区 -->
+    <swiper class="topListSwiper" next-margin='150rpx'>
+      <swiper-item >
+        <view class="title">云音乐热歌榜A</view>       
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">1</text>
+          <text class="musicName">光辉岁月</text>
+        </view>
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">2</text>
+          <text class="musicName">海阔天空</text>
+        </view>
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">1</text>
+          <text class="musicName">真的爱你</text>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="title">云音乐热歌榜B</view>       
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">1</text>
+          <text class="musicName">光辉岁月</text>
+        </view>
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">2</text>
+          <text class="musicName">海阔天空</text>
+        </view>
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">1</text>
+          <text class="musicName">真的爱你</text>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="title">云音乐热歌榜C</view>       
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">1</text>
+          <text class="musicName">光辉岁月</text>
+        </view>
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">2</text>
+          <text class="musicName">海阔天空</text>
+        </view>
+        <view class="musicItem">
+          <image src='/static/images/nvshen.jpg'></image>
+          <text class="count">1</text>
+          <text class="musicName">真的爱你</text>
+        </view>
+      </swiper-item>
+    </swiper>
   </view>
 </view>
