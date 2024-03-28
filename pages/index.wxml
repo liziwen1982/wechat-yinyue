@@ -2,7 +2,7 @@
 
 <!-- 轮播图区域 -->
   <swiper class="banners" indicator-dots="true" indicator-active-color="#d43c33" indicator-color="ivory">
-    <swiper-item wx:for="{{bannerListData}}" >
+    <swiper-item wx:for="{{bannerListData}}" wx:key="bannerId">
       <image src="{{item.pic}}" />
     </swiper-item>
   </swiper>
