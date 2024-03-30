@@ -7,8 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bannerList:[], // 轮播图数据
+    bannerList:[],    // 轮播图数据
     reconmandList:[], // 推荐歌单
+    topList:[],       // 排行榜数据
   },
 
   /**
@@ -38,6 +39,25 @@ Page({
       reconmandList: reconmandListData.result
       }
     )
+
+    /*
+    需求分析
+      1. 需要根据idx的值获取对应的数据
+      2. idx的范围 0~20
+      3. 需要发送5次请求
+    */
+    let index = 0
+    let resultArry = []
+    while(index < 5){
+      let topListData = await repquest('/top/list', {index:index++})
+      let topListItem = {plName: topListData.playlist.plName, tracks:topListData.playlist.tracks.slice(0, 3)}
+      resultArry.push(topListItem)
+      this.setData({
+        topList: resultArry
+        }
+      )
+    }
+
   },
 
   /**
