@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index"
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/video/video"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap.json",
@@ -9,5 +11,22 @@
     "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "渔民播放器"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页"
+    },
+    {
+      "pagePath": "pages/personal/personal",
+      "text": "个人中心"
+    },
+    {
+      "pagePath": "pages/video/video",
+      "text": "视频"
+    }]
   }
 }

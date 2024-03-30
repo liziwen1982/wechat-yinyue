@@ -1,4 +1,4 @@
-import repquest from "../utils/request"
+import repquest from "../../utils/request"
 
 // pages/index.js
 Page({
