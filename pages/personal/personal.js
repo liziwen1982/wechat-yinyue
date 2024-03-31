@@ -22,7 +22,6 @@ Page({
   },
 
   handleTouchStart(event) {
-    console.log('start')
     startY = event.touches[0].clientY;
 
     this.setData({
@@ -33,7 +32,6 @@ Page({
   handleTouchMove(event) {
     moveY = event.touches[0].clientY;
     moveDistance = moveY - startY;
-    console.log(moveDistance);
 
     if(moveDistance <= 0 ){
       return;
@@ -48,7 +46,6 @@ Page({
   },
 
   handleTouchEnd() {
-    console.log('end')
     // 动态更新 coverTransform 的状态值
     this.setData({
       coverTransform: `translateY(0rpx)`,
