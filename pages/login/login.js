@@ -15,6 +15,8 @@
 */
 
 // pages/login/login.js
+import request from '../../utils/request'
+
 Page({
 
   /**
@@ -43,7 +45,7 @@ Page({
   },
 
   // 登陆的回调
-  login(){
+  async login(){
     // 1.收集数据
     let {phone, password} = this.data;
     console.log(phone, password)
@@ -84,6 +86,26 @@ Page({
     wx.showToast({
       title: '前端验证成功'
     })
+
+    // 后端验证
+    let result = await request('/login/cellphone', {phone, password})
+    if(result.code === 200){
+      wx.showToast({
+        title: '登录成功'
+      })
+    }
+    if(result.code === 400){
+      wx.showToast({
+        title: '手机号码错误',
+        icon: 'none'
+      })
+    }
+    if(result.code === 502){
+      wx.showToast({
+        title: '密码错误',
+        icon: 'none'
+      })
+    }
   },
 
   /**
