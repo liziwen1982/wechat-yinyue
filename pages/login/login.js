@@ -56,7 +56,7 @@ Page({
     *   2. 手机号格式不正确
     *   3. 手机号格式正确，验证通过
     * */
-
+    
     if(!phone){
       wx.showToast({
         title: '手机号不能为空',
@@ -92,6 +92,13 @@ Page({
     if(result.code === 200){
       wx.showToast({
         title: '登录成功'
+      })
+
+      wx.setStorageSync('userInfo', JSON.stringify(result.profile))
+
+      // 跳转到 个人中心
+      wx.reLaunch({
+        url: '/pages/personal/personal',
       })
     }
     if(result.code === 400){

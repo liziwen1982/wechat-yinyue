@@ -11,14 +11,22 @@ Page({
    */
   data: {
     coverTransform: 'translateY(0)',
-    coveTransition: ''
+    coveTransition: '',
+    userInfo : {} // 用户信息
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    
+    // 读取用户基本信息
+    let userInfo = wx.getStorageSync('userInfo')
+    console.log('personal:' + userInfo)
+    if(userInfo){
+      this.setData({
+        userInfo: JSON.parse(userInfo) /// 更新用户信息
+      })
+    }
   },
 
   handleTouchStart(event) {
@@ -50,6 +58,13 @@ Page({
     this.setData({
       coverTransform: `translateY(0rpx)`,
       coverTransition: 'transform 1s linear'
+    })
+  },
+
+  // 跳转到 login 登录页面
+  toLogin(){
+    wx.navigateTo({
+      url: '/pages/login/login',
     })
   },
 
