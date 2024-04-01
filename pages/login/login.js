@@ -38,7 +38,6 @@ Page({
   handleInput(event){    
     // let type = event.currentTarget.id; // id传值
     let type = event.currentTarget.dataset.type;
-    console.log(type, event.detail.value)
     this.setData({
       [type]: event.detail.value
     })
@@ -48,7 +47,6 @@ Page({
   async login(){
     // 1.收集数据
     let {phone, password} = this.data;
-    console.log(phone, password)
     // 2.前端验证
     /*
     * 手机号验证：

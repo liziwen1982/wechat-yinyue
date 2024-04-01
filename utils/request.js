@@ -31,7 +31,7 @@ export default (url, data={}, method="GET" ) => {
         resolve(res.data)
       },
       fail : (err) => {
-        console.log("请求失败：", err)
+        //console.log("请求失败：", err)
         rejest(err)
       }  
     }
