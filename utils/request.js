@@ -26,8 +26,18 @@ export default (url, data={}, method="GET" ) => {
       url: config.host + url,
       data,
       method,
-      success: (res) => { 
-        //console.log("请求成功：", res)
+      header:{
+        cookie:wx.getStorageSync('cookie')?wx.getStorageSync('cookie').find(item => item.indexOf('cookie3') != -1):''
+      },
+      success: (res) => {
+        if(data.isLogin){
+          console.log("登录请求成功：", res)
+          wx.setStorage({
+            key: 'cookie',
+            data: res.cookies
+          })
+        } 
+          
         resolve(res.data)
       },
       fail : (err) => {

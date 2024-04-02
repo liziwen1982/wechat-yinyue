@@ -8,6 +8,7 @@ Page({
    */
   data: {
     videoGroupList: [], // 导航标签数据
+    videoList: [], // 某个导航标识的数据
     navId: '' // 导航标识
   },
 
@@ -22,7 +23,18 @@ Page({
   async getVideoGroupList(){
     let videoGroupListData = await request('/video/group/list')
     this.setData({
-      videoGroupList : videoGroupListData.data.slice(0, 14)
+      videoGroupList : videoGroupListData.data.slice(0, 14),
+      navId:videoGroupListData.data[0].id
+    })
+
+    this.getVideoList(this.data.navId)
+  },
+
+  // 获取某个视频组的视频列表
+  async getVideoList(navId){
+    let videoListData = await request('/video/group', {id:navId})
+    this.setData({
+      videoList : videoListData
     })
   },
 
@@ -35,6 +47,8 @@ Page({
     this.setData({
       navId:navId
     })
+
+    this.getVideoList(navId)
   },
 
   /**
