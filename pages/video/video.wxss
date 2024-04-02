@@ -32,6 +32,6 @@
   
 }
 
-.navScroll .navItem .native {
+.navScroll .navItem .active {
   border-bottom: 1rpx solid #d43c33;
 }
