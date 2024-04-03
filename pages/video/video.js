@@ -33,8 +33,10 @@ Page({
   // 获取某个视频组的视频列表
   async getVideoList(navId){
     let videoListData = await request('/video/group', {id:navId})
+    let index = 0
+    let videoList = videoListData.map(item => {item.id = index++;return item;})
     this.setData({
-      videoList : videoListData
+      videoList : videoList
     })
   },
 
